@@ -1,9 +1,20 @@
+import HeroAnimation from "@/sections/landing/hero/Animation";
 import { useEffect, useState, type JSX } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import IntroAnimation from "@/sections/landing/Intro/Animation";
+import AboutFollowText from "@/sections/landing/about/Animation";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const globalAnimations: JSX.Element[] = [];
 
 const animationsByPath: Record<string, JSX.Element[]> = {
-  "/": [],
+  "/": [
+  <HeroAnimation key={"Hero"}/>,
+  <IntroAnimation key={"Intro"}/>,
+  <AboutFollowText key={"About Curved Text"}/>,
+],
   "/page1": [],
   "/page2": [],
   "/page3": []

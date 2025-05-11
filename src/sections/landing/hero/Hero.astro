@@ -1,0 +1,12 @@
+---
+import "./Hero.scss";
+import LogoScene from "@/scenes/LogoScene";
+import HeroScene from "@/scenes/HeroScene";
+---
+
+<section class="hero">
+  <div class="hero__logo-wrapper">
+    <LogoScene client:only />
+  </div>
+  <HeroScene client:only />
+</section>

@@ -1,0 +1,131 @@
+.about {
+  height: 80vh;
+  transform: translateY(calc(20vh + 1px));
+  position: relative;
+  background: linear-gradient(to left, $color-accent 0%, $color-bg 70%);
+  background-size: 200% 200%;
+  z-index: 3;
+  border-radius: 25px 25px 0 0;
+  @include flexbox(column, flex-start, center);
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    padding: 4rem 2rem;
+    @include flexbox(column, flex-start, center);
+    gap: 5rem;
+    width: 1300px;
+    transform: translateX(-2.5vw);
+  }
+
+  &__layers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    @include flexbox(column, flex-start, flex-start);
+    gap: 2rem;
+    z-index: 1;
+
+    .about__layer {
+      &--circle {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 120px 120px rgba(61, 200, 250, 0.25);
+        z-index: 1;
+        width: 550px;
+        transform: translateX(35%);
+      }
+
+      &--photo {
+        position: absolute;
+        z-index: 2;
+        border-radius: 50%;
+        max-width: 520px;
+        width: 33%;
+        transform: translateX(35%) translateY(30%);
+      }
+
+      &--layer2 {
+        position: absolute;
+        z-index: 2;
+        right: -95%;
+        top: 35%;
+        width: 100%;
+      }
+
+      img {
+        object-fit: cover;
+      }
+
+      .curved-text{
+        position: absolute;
+        inset: -6%;
+        color: #ffbb55a4;
+        opacity: 0.85;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    gap: 50px;
+
+    @include flexbox(column, flex-start, flex-start);
+    transform: translateX(10vw);
+  }
+
+  &__header {
+    line-height: 1.1;
+  }
+
+  &__name {
+    font-size: 5rem;
+    font-weight: 600;
+  }
+
+  &__position {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  &__info {
+    @include flexbox(column);
+    width: 100%;
+    gap: 57px;
+
+    &-row {
+      @include flexbox(row, flex-start, center);
+
+      gap: 0.75rem;
+      font-size: 1.45rem;
+
+      &:nth-child(1) {
+        transform: translateX(5vw);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(7.5vw);
+      }
+
+      &:nth-child(3) {
+        transform: translateX(1vw);
+      }
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    @include flexbox(row, flex-end, center);
+    gap: 1rem;
+    padding: 0 30%;
+    font-weight: 600;
+  }
+}

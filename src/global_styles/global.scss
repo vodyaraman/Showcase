@@ -1,9 +1,5 @@
 @use './variables.scss';
 
-:root {
-  --section-padding: 0 10vw;
-}
-
 /* RESET */
 *,
 *::before,
@@ -31,7 +27,8 @@ body {
 }
 
 #page-content {
-  display: none;
+  //display: none;
+  overflow: hidden;
 }
 
 html,
@@ -122,6 +119,6 @@ li {
   filter: invert(1);
 }
 
-.section {
-  padding: var(--section-padding);
+section {
+  height: 100vh;
 }

@@ -40,9 +40,9 @@ $button-bg-color-hovered: $color-accent-hover;
     }
 
     &.outlined {
-        border: 1px solid $button-bg-color;
-        background-color: transparent;
-        color: $color-accent;
+        border: 2px solid $button-bg-color;
+        background-color: $color-bg;
+        color: $color-text;
 
         &:hover {
             background-color: $button-bg-color;

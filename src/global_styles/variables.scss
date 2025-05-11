@@ -1,16 +1,14 @@
 @use 'sass:color';
 
-:root {
-    --section-padding: 0 10vw;
-}
-
 // Цвета
-$color-bg: #eff1ea;
-$color-text: #1a1a1a;
-$color-accent: #000000;
+$color-bg: #ffffff;
+$color-text: #1F2442;
+$color-text-hovered: #ffffff;
+$color-accent: #2DAFFF;
 $color-accent-gradient: color.adjust($color-accent, $lightness: 5%);
 $color-accent-hover: color.adjust($color-accent, $lightness: 10%);
 $color-accent-text: #fafafa;
+$color-overlay: #f2ecec17;
 $color-border: #202020;
 $color-muted: #AEAEAE;
 $color-error: #f13737;

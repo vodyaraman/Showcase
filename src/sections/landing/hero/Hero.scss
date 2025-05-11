@@ -1,0 +1,13 @@
+.hero {
+  position: relative;
+  @include background-cover-center("@/assets/intro-images/background-layer-bottom.svg");
+  filter: brightness(0.9) contrast(1.1);
+
+  &__logo-wrapper {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 20vh;
+    background-color: transparent;
+  }
+}

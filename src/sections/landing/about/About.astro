@@ -1,0 +1,60 @@
+---
+import { MainButton } from "@/components/buttons";
+import "./About.scss";
+import Icon from "@/components/icons/Icon";
+import aboutMiddleLayer from "@/assets/about-images/about-middle-layer.png";
+import aboutTopLayer from "@/assets/about-images/about-top-layer.png";
+import aboutMiddleLayer2 from "@/assets/about-images/about-middle-layer2.png";
+---
+
+<section class="about">
+  <div class="about__container">
+    <div class="about__layers">
+      <div class="about__layer about__layer--circle">
+        <img src={aboutMiddleLayer.src} alt="background circle with code" />
+
+        <div class="curved-text">
+          <Icon id="curvedtext"/>
+        </div>
+
+        <div class="about__layer about__layer--layer2">
+          <img
+            src={aboutMiddleLayer2.src}
+            alt="stripes with location/email/age"
+          />
+        </div>
+      </div>
+
+      <div class="about__layer about__layer--photo">
+        <img src={aboutTopLayer.src} alt="Anton Saevskii sitting" />
+      </div>
+    </div>
+
+    <div class="about__content">
+      <header class="about__header">
+        <h1 class="about__name">Anton Saevskii</h1>
+        <h2 class="about__position">Junior Fullstack Developer</h2>
+      </header>
+
+      <div class="about__info">
+        <div class="about__info-row">
+          <Icon id="react" />
+          <span>Murmansk, Russia</span>
+        </div>
+        <div class="about__info-row">
+          <Icon id="react" />
+          <span>a.vodyaraman@gmail.com</span>
+        </div>
+        <div class="about__info-row">
+          <Icon id="react" />
+          <span>23 years old</span>
+        </div>
+      </div>
+
+      <div class="about__buttons">
+        <MainButton l className="outlined" text="FEEDBACK" onClick={() => {}} />
+        <MainButton s className="outlined" text="ICO" onClick={() => {}} />
+      </div>
+    </div>
+  </div>
+</section>

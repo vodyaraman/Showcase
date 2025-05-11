@@ -1,0 +1,66 @@
+.intro {
+  position: relative;
+  @include background-cover-center("@/assets/intro-images/background2-layer-bottom.svg");
+  filter: brightness(0.9) contrast(1.1);
+  z-index: 2;
+
+  &__nav-panel {
+    @include flexbox(column, space-between);
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 400px;
+    display: flex;
+    z-index: 10;
+
+    a {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 1rem 10px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      color: $color-accent-text;
+
+      &:hover {
+        color: $color-text-hovered;
+        backdrop-filter: blur(5px);
+      }
+    }
+  }
+
+  &__bg-layer,
+  &__bg2-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &__bg-layer--top {
+    transform: translateY(-55%);
+    min-width: 1200px;
+  }
+
+  &__bg2-layer {
+    top: unset;
+    bottom: 0;
+  }
+
+  &__bg2-layer--top {
+    transform: translateY(65vh);
+    min-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    &__nav-panel {
+      left: 0;
+      padding: var(--section-padding);
+      width: 100%;
+    }
+  }
+}
